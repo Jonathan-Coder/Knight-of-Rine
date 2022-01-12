@@ -163,6 +163,7 @@ MonoBehaviour:
   horizontalInput: 0
   speed: 10
   xRange: 10
+  changeTime: 3
 --- !u!212 &404667122
 SpriteRenderer:
   m_ObjectHideFlags: 0
