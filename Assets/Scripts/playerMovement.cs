@@ -9,6 +9,8 @@ public class playerMovement : MonoBehaviour
     public float xRange = 10;
     public float changeTime = 3.0f;
 
+    private Vector3 position;
+
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
 
@@ -22,6 +24,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        position = transform.position;
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -56,5 +59,16 @@ public class playerMovement : MonoBehaviour
 
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
+        if (position.x > 4.5f)
+        {
+            position.x = 4.5f;
+            transform.position = position;
+            Debug.Log("Outside");
+
+        }
     }
+
+    
 }
+
