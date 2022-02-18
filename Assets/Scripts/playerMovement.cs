@@ -8,6 +8,7 @@ public class playerMovement : MonoBehaviour
     public float speed = 10.0f;
     public float xRange = 10;
     public float changeTime = 3.0f;
+    public Health healthCS = new Health();
 
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
@@ -53,8 +54,16 @@ public class playerMovement : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
         */
-
+        
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log(healthCS.health--);
+        }
     }
 }
