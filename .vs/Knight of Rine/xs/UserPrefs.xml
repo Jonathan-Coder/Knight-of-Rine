@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{94B1BF75-0ADA-AD95-BBD6-3B0FE3B040C6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/playerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Menu.cs">
     <Files>
-      <File FileName="Assets/Scripts/Health.cs" Line="46" Column="9" />
-      <File FileName="Assets/Scripts/playerMovement.cs" Line="49" Column="9" />
-      <File FileName="Assets/Scripts/changeStance.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI System.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Menu.cs" Line="28" Column="32" />
+      <File FileName="Assets/Scripts/Health.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/playerMovement.cs" Line="86" Column="11" />
+      <File FileName="Assets/Scripts/Menu.cs" Line="47" Column="17" />
+      <File FileName="Assets/Scripts/changeStance.cs" />
+      <File FileName="Assets/Scripts/UI System.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +13,7 @@
           <Node name="Knight of Rine" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="playerMovement.cs" selected="True" />
+                <Node name="Menu.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e5dc8f72-8bb1-48b6-8a96-13dc2dabdd43" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="24e1a547-4ba9-423e-a1c3-f507a73f2e4e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

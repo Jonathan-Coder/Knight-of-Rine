@@ -488,10 +488,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
+  verticalInput: 0
   speed: 10
   xRange: 10
   changeTime: 3
+  paused: 0
   healthCS: {fileID: 404667125}
+  menu: {fileID: 2146039927}
 --- !u!212 &404667122
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2152,6 +2155,7 @@ MonoBehaviour:
   menucam: {fileID: 1558733186}
   health: {fileID: 2029574904}
   healthUI: {fileID: 339603647}
+  playerCS: {fileID: 404667121}
 --- !u!114 &2146039928
 MonoBehaviour:
   m_ObjectHideFlags: 0

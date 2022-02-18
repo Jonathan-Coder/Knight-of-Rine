@@ -10,13 +10,13 @@ public class Menu : MonoBehaviour
     public GameObject health;
     public GameObject healthUI;
 
+    public playerMovement playerCS;
+
     // Start is called before the first frame update
     void Start()
     {
-        menucam.SetActive(true);
-        scenecam.SetActive(false);
-        health.SetActive(false);
-        healthUI.SetActive(false);
+        startUp();
+        //healthUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,10 +26,26 @@ public class Menu : MonoBehaviour
     }
 
     public void Startbutton() {
+        startButton();
+        //healthUI.SetActive(true);
+    }
+
+    public void startUp()
+    {
+        playerCS.paused = true;
+        menucam.SetActive(true);
+        scenecam.SetActive(false);
+        health.SetActive(false);
+        playerCS.pause();
+    }
+
+    public void startButton()
+    {
         menucam.SetActive(false);
         scenecam.SetActive(true);
+        playerCS.resume();
+        playerCS.paused = false;
         health.SetActive(true);
-        healthUI.SetActive(true);
     }
 
     public void Quitbutton()

@@ -5,10 +5,15 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public float horizontalInput;
+    public float verticalInput;
     public float speed = 10.0f;
     public float xRange = 10;
     public float changeTime = 3.0f;
-    public Health healthCS = new Health();
+
+    public bool paused;
+
+    public Health healthCS;
+    public Menu menu;
 
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
@@ -54,9 +59,33 @@ public class playerMovement : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
         */
+
+        if (Input.GetKeyUp(KeyCode.Escape) && !paused)
+        {
+            menu.startUp();
+            pause();
+            paused = true;
+        } else if(Input.GetKeyUp(KeyCode.Escape) && paused)
+        {
+            resume();
+            menu.startButton();
+            paused = false;
+        }
         
         horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        transform.Translate(Vector3.up * verticalInput * Time.deltaTime * speed);
+    }
+
+    public void pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void resume()
+    {
+        Time.timeScale = 1;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
