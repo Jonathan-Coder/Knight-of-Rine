@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{94B1BF75-0ADA-AD95-BBD6-3B0FE3B040C6}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/playerMovement.cs">
     <Files>
-      <File FileName="Assets/Scripts/playerMovement.cs" Line="38" Column="52" />
-      <File FileName="Assets/Scripts/changeStance.cs" Line="40" Column="6" />
+      <File FileName="Assets/Scripts/playerMovement.cs" Line="71" Column="43" />
+      <File FileName="Assets/Scripts/screenBounds.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1f5a808f-e064-43b0-98f1-f5e8a83a0d67" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b01afd32-6362-42af-9a84-e6a11bcf8839" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

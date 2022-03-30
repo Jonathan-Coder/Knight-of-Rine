@@ -66,6 +66,9 @@ public class playerMovement : MonoBehaviour
             transform.position = position;
             Debug.Log("Outside");
 
+        } else if(position.x < -5){
+            position.x = -5f;
+            transform.position = position;
         }
     }
 
