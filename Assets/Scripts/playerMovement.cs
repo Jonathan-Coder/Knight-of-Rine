@@ -11,6 +11,7 @@ public class playerMovement : MonoBehaviour
     public float changeTime = 3.0f;
 
     public bool paused;
+    private bool attackStance;
 
     public Health healthCS;
     public Menu menu;
@@ -60,6 +61,16 @@ public class playerMovement : MonoBehaviour
         }
         */
 
+        if (Input.GetKeyDown(KeyCode.Space) && attackStance)
+        {
+            //Launch a projectile from the player
+            //Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            attackStance = false;
+        } else if (Input.GetKeyDown(KeyCode.Space) && !attackStance)
+        {
+            attackStance = true;
+        }
+
         if (Input.GetKeyUp(KeyCode.Escape) && !paused)
         {
             menu.startUp();
@@ -90,9 +101,15 @@ public class playerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && attackStance)
         {
-            Debug.Log(healthCS.health--);
+            Destroy(other.gameObject);
+            
+        } else if(other.gameObject.CompareTag("Enemy") && !attackStance)
+        {
+            healthCS.health--;
         }
+
+
     }
 }
